@@ -1,5 +1,6 @@
 import React from "react";
 
+import { GiPawHeart } from "react-icons/gi";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter, faGithub, faTelegram, faPaypal, faPatreon } from "@fortawesome/free-brands-svg-icons";
 
@@ -12,7 +13,7 @@ const Footer = () => {
         <div className="copyright">
           <p>&copy; AxiomOS project</p>
           <p>Want to contact with us? <a href="mailto:contact@axiomos.pl" className="mail">Just send us an email</a></p>
-          <p>Built with <span className="author" role="img" aria-label="Love">&#9829;</span> by <span className="author">PinkLlama</span></p>
+          <p>Built with <GiPawHeart className="author" /> by <span className="author">PinkLlama</span></p>
         </div>
         <div className="socialContainer">
           <a href="">
