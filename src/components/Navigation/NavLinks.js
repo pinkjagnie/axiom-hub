@@ -15,10 +15,10 @@ const NavLinks = (props) => {
         <a href="/">Home</a>
       </motion.li>
       <motion.li initial={animateFrom} animate={animateTo} transition={{delay: 0.10}} onClick={() =>  props.closeMenu()}>
-        <a href="#">About</a>
+        <a href="#" target="_blank">About</a>
       </motion.li>
       <motion.li initial={animateFrom} animate={animateTo} transition={{delay: 0.20}} onClick={() => props.closeMenu()}>
-        <a href="#">Blog</a>
+        <a href="#" target="_blank">Blog</a>
       </motion.li>
     </ul>
   )
