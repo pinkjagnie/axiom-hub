@@ -3,6 +3,9 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faClose } from '@fortawesome/free-solid-svg-icons';
 
+import LegendModal from "./Modal/LegendModal";
+import InfoModal from "./Modal/InfoModal";
+
 import hubImg from "../img/hub_300-300.png";
 
 import "./SearchBar.css";
@@ -63,7 +66,9 @@ const DUMMY_DATA = [
 const SearchBar = () => {
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
-  
+  const [infoModalIsShown, setInfoModalIsShown] = useState(false);
+  const [legendModalIsShown, setLegendModalIsShown] = useState(false);
+
   const dataScoreClass = (score) => {
     if (score <=2) {
       return "dataItemScore danger"
@@ -95,8 +100,26 @@ const SearchBar = () => {
     setWordEntered("");
   };
 
+  const hideInfoModalHandler = () => {
+    setInfoModalIsShown(false);
+  };
+
+  const showInfoModal = () => {
+    setInfoModalIsShown(true)
+  };
+
+  const hideLegendModalHandler = () => {
+    setLegendModalIsShown(false);
+  };
+
+  const showLegendModal = () => {
+    setLegendModalIsShown(true)
+  };
+
   return(
     <div className="searchSection">
+      {infoModalIsShown && <InfoModal onClose={hideInfoModalHandler} />}
+      {legendModalIsShown && <LegendModal onClose={hideLegendModalHandler} />}
       <div className="imageSection">
         <h3>Check if your application is safe and if it cares about your safety</h3>
       </div>
@@ -112,16 +135,16 @@ const SearchBar = () => {
           return <div className="dataItem" key={value.aid}>
                 <img src={hubImg} alt="application" />
                 <p>{value.app_name}</p>
-                <div className={dataScoreClass(value.privacy_score)}> 
+                <div className={dataScoreClass(value.privacy_score)} onClick={showLegendModal}> 
                     <p>{value.privacy_score}</p>
                     <p>privacy score</p>
                 </div>
-                <div className={dataScoreClass(value.rules_score)}>
+                <div className={dataScoreClass(value.rules_score)} onClick={showLegendModal}>
                   <p>{value.rules_score}</p>
                   <p>rules score</p>
                 </div>
                 <div className="moreInfoButton">
-                  <button>more</button>
+                  <button onClick={showInfoModal}>more</button>
                 </div>
               </div>
         })}
