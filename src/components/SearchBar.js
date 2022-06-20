@@ -95,13 +95,10 @@ const SearchBar = () => {
     setWordEntered("");
   };
 
-
-
   return(
     <div className="searchSection">
       <div className="imageSection">
         <h3>Check if your application is safe and if it cares about your safety</h3>
-        <img src={hubImg} alt="AxiomOS Hub" />
       </div>
       <div className="searchBox">
         <input type="text" placeholder="Type to search..." className="searchInput" value={wordEntered}
