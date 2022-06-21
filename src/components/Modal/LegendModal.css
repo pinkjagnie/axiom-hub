@@ -8,7 +8,7 @@
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.legendModal {
+.legendModalSection .legendModal {
   position: fixed;
   top: 25vh;
   left: calc(50% - 35vw);
@@ -22,7 +22,7 @@
   animation: slide-down 300ms ease-out forwards;
 }
 
-.closeLegendModalButton {
+.legendModalSection .legendModal .closeLegendModalButton {
   position: fixed;
   width: 18%;
   height: auto;
@@ -31,12 +31,12 @@
   cursor: pointer;
 }
 
-.legendModalText {
+.legendModalSection .legendModal .legendModalText {
   padding: 1.1rem;
   text-align: center;
 } 
 
-.closingLegendModal {
+.legendModalSection .legendModal .closingLegendModal {
   display: block;
   width: 40vw;
   margin: 0.5rem auto;
@@ -51,55 +51,69 @@
 }
 
 @media (min-width: 360px) {
-  .legendModalText {
+  .legendModalSection .legendModal .legendModalText {
     padding: 2.5rem;
   }
 
-  .closingLegendModal {
+  .legendModalSection .legendModal .closingLegendModal {
     margin: 1.5rem auto;
   }
 }
 
 @media (min-width: 600px) {
-  .legendModalText {
-    padding: 3rem;
+  .legendModalSection .legendModal {
+    top: 30vh;
+    left: calc(50% - 28vw);
+    width: 50vw;
+    height: 30vh;
   }
 
-  .closingLegendModal {
+  .legendModalSection .legendModal .legendModalText {
+    padding: 1rem;
+  }
+
+  .legendModalSection .legendModal .closingLegendModal {
     margin: 1.5rem auto;
   }
 }
 
-@media (min-width: 768px) {
-  .legendModal {
-    width: 60vw;
-    left: calc(50% - 30vw);
-  }
-
-  .closingLegendModal {
-    margin: 1.8rem auto;
-  }
-}
-
 @media (min-width: 1024px) {
-  .closeLegendModalButton {
+  .legendModalSection .legendModal {
+    top: 30vh;
+    left: calc(50% - 15vw);
+    width: 30vw;
+    height: 30vh;
+  }
+
+  .legendModalSection .legendModal .closeLegendModalButton {
     width: 8%;
     height: auto;
     right: -3%;
     top: -5%;
   }
 
-  .legendModalText {
-    padding: 1.3rem;
+  .legendModalSection .legendModal .legendModalText {
+    font-size: 1rem;
   }
 
-  .closingLegendModal {
-    width: 30vw;
+  .legendModalSection .legendModal .closingLegendModal {
+    width: 15vw;
+    margin: 0 auto;
+    font-size: 1.1rem;
   }
   
-  .closingLegendModal:hover {
+  .legendModalSection .legendModal .closingLegendModal:hover {
     background-color: #656565;
     color: white;
+  }
+}
+
+@media (min-width: 1366px) {
+  .legendModalSection .legendModal {
+    top: 30vh;
+    left: calc(50% - 10vw);
+    width: 20vw;
+    height: 32vh;
   }
 }
 

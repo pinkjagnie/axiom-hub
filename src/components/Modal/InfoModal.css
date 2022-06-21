@@ -8,98 +8,173 @@
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.infoModal {
+.infoModalSection .infoModal {
   position: fixed;
-  top: 25vh;
-  left: calc(50% - 35vw);
-  width: 60vw;
-  height: 50vh;
-  background-color: white;
+  top: 17vh;
+  left: calc(50% - 38vw);
+  width: 70vw;
+  height: 66vh;
   padding: 1rem;
   border-radius: 14px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  background-color: white;
   z-index: 3;
   animation: slide-down 300ms ease-out forwards;
 }
 
-.closeInfoModalButton {
+.infoModalSection .infoModal .closeInfoModalButton {
   position: fixed;
   width: 18%;
   height: auto;
-  right: -3%;
+  right: -5%;
   top: -5%;
   cursor: pointer;
 }
 
-.infoModalText {
-  padding: 1.1rem;
-  text-align: center;
+.infoModalSection .infoModal .infoModalText {
+  font-size: 0.8rem;
 } 
 
-.closingInfoModal {
+.infoModalSection .infoModal .infoModalLegend,
+.infoModalSection .infoModal .infoModalText p:nth-of-type(2) {
+  font-size: 0.6rem;
+} 
+
+.infoModalSection .infoModal .infoModalLegend {
+  padding-top: 0.5rem;
+}
+
+.infoModalSection .infoModal .infoModalText a {
+  text-decoration: none;
+}
+
+.infoModalSection .infoModal .closingInfoModal {
   display: block;
   width: 40vw;
-  margin: 0.5rem auto;
-  padding: 0.5rem 2rem;
+  margin: 1.3rem auto;
+  padding: 0.7rem 2rem;
   border: 1.5px solid black;
   border-radius: 25px;
   background-color: #1f2b37;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
 }
 
 @media (min-width: 360px) {
-  .infoModalText {
+  .infoModalSection .infoModal .infoModalText {
     padding: 2.5rem;
   }
 
-  .closingInfoModal {
+  .infoModalSection .infoModal .closingInfoModal {
     margin: 1.5rem auto;
   }
 }
 
-@media (min-width: 600px) {
-  .infoModalText {
-    padding: 3rem;
+@media (min-width: 390px) {
+  .infoModalSection .infoModal {
+    top: 25vh;
+    left: calc(50% - 38vw);
+    width: 70vw;
+    height: 50vh;
   }
 
-  .closingInfoModal {
+  .infoModalSection .infoModal .infoModalText {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 410px) {
+  .infoModalSection .infoModal .infoModalText {
+    font-size: 1rem;
+  } 
+
+  .infoModalSection .infoModal .infoModalLegend,
+  .infoModalSection .infoModal .infoModalText p:nth-of-type(2) {
+    font-size: 0.7rem;
+  } 
+}
+
+@media (min-width: 600px) {
+  .infoModalSection .infoModal .closingInfoModal {
     margin: 1.5rem auto;
   }
 }
 
 @media (min-width: 768px) {
-  .infoModal {
-    width: 60vw;
-    left: calc(50% - 30vw);
+  .infoModalSection .infoModal {
+    top: 25vh;
+    left: calc(50% - 25vw);
+    width: 50vw;
+    height: 50vh;
   }
 
-  .closingInfoModal {
+  .infoModalSection .infoModal .infoModalText {
+    padding: 1rem;
+    font-size: 1.2rem;
+  } 
+
+  .infoModalSection .infoModal .infoModalLegend,
+  .infoModalSection .infoModal .infoModalText p:nth-of-type(2) {
+    font-size: 0.8rem;
+  } 
+
+  .infoModalSection .infoModal .closingInfoModal {
     margin: 1.8rem auto;
+    font-size: 1.2rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .closeInfoModalButton {
+  .infoModalSection .infoModal {
+    top: 15vh;
+    left: calc(50% - 20vw);
+    width: 40vw;
+    height: 70vh;
+  }
+
+  .infoModalSection .infoModal .closeInfoModalButton {
     width: 8%;
     height: auto;
     right: -3%;
-    top: -5%;
+    top: -4%;
   }
 
-  .infoModalText {
-    padding: 1.3rem;
+  .infoModalSection .infoModal .infoModalText {
+    padding: 0;
   }
 
-  .closingInfoModal {
+  .infoModalSection .infoModal .closingInfoModal {
     width: 30vw;
+    margin: 1.3rem auto;
   }
   
-  .closingInfoModal:hover {
+  .infoModalSection .infoModal .closingInfoModal:hover {
     background-color: #656565;
     color: white;
+  }
+}
+
+@media (min-width: 1366px) {
+  .infoModalSection .infoModal {
+    top: 15vh;
+    left: calc(50% - 18vw);
+    width: 30vw;
+    height: 70vh;
+  }
+
+  .infoModalSection .infoModal .closeInfoModalButton {
+    width: 10%;
+    height: auto;
+    right: -4%;
+    top: -4%;
+  }
+
+  .infoModalSection .infoModal .closingInfoModal {
+    width: 20vw;
+    margin: 1.2rem auto;
   }
 }
 

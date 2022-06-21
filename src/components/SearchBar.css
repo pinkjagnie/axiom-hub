@@ -9,15 +9,15 @@
   flex-direction: column;
 }
 
-.imageSection {
+.sloganSection {
   position: absolute;
-  top: 20vh;
+  top: 15vh;
   left: 10vw;
   width: 80vw;
   height: auto;
 }
 
-.imageSection h3 {
+.sloganSection h3 {
   text-align: center;
   color: whitesmoke;
 }
@@ -41,7 +41,7 @@
   background: none;
   outline: none;
   color: #ffb178;
-  font-size: 20px;
+  font-size: 16px;
   width: 0px;
   transition: 0.6s;
   border-radius: 5px;
@@ -72,7 +72,7 @@
 .searchBox:hover > .searchInput {
   margin: 5px;
   padding-left: 15px;
-  width: 300px;
+  width: 50vw;
 }
 
 .searchBox:hover > .button {
@@ -80,11 +80,12 @@
   color: #243441;
 }
 
+/* RESULTS */
 
 .dataResult {
   margin-top: 5px;
-  width: 50vw;
-  height: 300px;
+  width: 85vw;
+  height: 45vh;
   background-color: lightgray;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   overflow: hidden;
@@ -105,37 +106,30 @@
   display: flex;
   align-items: center;
   color: black;
-  /* position: absolute;
-  top: calc(40vh + 200px); */
 }
 
 .dataItem p {
-  margin-left: 10px;
+  margin-left: 5px;
+  flex-grow: 1;
 }
-
-.dataItem:hover {
-  background-color: #858585
-}
-
 
 .dataResult .dataItem img {
-  /* display: block; */
-  width: 5%;
+  width: 7%;
   height: auto;
-  margin-left: 1rem;
+  margin-left: 0.5rem;
 }
 
 .dataResult .dataItem p:nth-of-type(1) {
-  flex-basis: 40%;
+  flex-basis: 30%;
 }
 
 .dataResult .dataItem .dataItemScore {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 50px;
-  height: 50px;
-  margin: 0 0 0 1rem;
+  width: 45px;
+  height: 45px;
+  margin: 0 0 0 0.5rem;
   border: 1px solid #181818;
   border-radius: 10px;
   cursor: pointer;
@@ -144,58 +138,144 @@
 .dataResult .dataItem .dataItemScore p {
   margin: 0;
   padding: 0.3rem;
-}
-.dataResult .dataItem .dataItemScore p {
   text-align: center;
+  font-size: 0.8rem;
 }
 
 .dataResult .dataItem .dataItemScore p:nth-child(1) {
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 .dataResult .dataItem .dataItemScore p:nth-child(2) {
   font-size: 0.5rem;
 }
 
-.danger {
+.danger,
+.warning,
+.secondary,
+.success {
   color: white;
+}
+
+.danger {
   background-color: #bd2d3c;
 }
 
 .warning {
-  color: white;
   background-color: #a76502;
 }
 
 .secondary {
-  color: white;
   background-color: #6c757d;
 }
 
 .success {
-  color: white;
   background-color: #177248;
 }
 
 .moreInfoButton {
-  margin-left: 3rem;
+  margin-left: 0.5rem;
+  flex-basis: 2%;
+  margin-right: 0.5rem;
 }
 
 .moreInfoButton button {
   display: block;
-  width: 8vw;
+  /* width: 5vw; */
   margin: 0.5rem auto;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1rem;
   border: 1.5px solid black;
-  border-radius: 25px;
+  border-radius: 15px;
   background-color: #1f2b37;
   color: white;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: bold;
   cursor: pointer;
 }
 
-.moreInfoButton button:hover {
-  background-color: lightgray;
-  color: #1f2b37;
+
+@media (min-width: 600px) {
+  .searchInput {
+    font-size: 20px;
+  }
+
+  /* RESULTS */
+
+  .dataResult {
+    width: 65vw;
+  }
+
+  .dataItem p {
+    margin-left: 10px;
+  }
+
+  .dataResult .dataItem .dataItemScore p {
+    font-size: 1rem;
+  }
+
+  .dataResult .dataItem p:nth-of-type(1) {
+    flex-basis: 40%;
+  }
+
+  .dataResult .dataItem .dataItemScore {
+    width: 60px;
+    height: 50px;
+    margin: 0 0 0 1rem;
+  }
+
+  .dataResult .dataItem .dataItemScore p:nth-child(1) {
+    font-size: 1rem;
+  }
+  
+  .dataResult .dataItem .dataItemScore p:nth-child(2) {
+    font-size: 0.5rem;
+  }
+
+  .moreInfoButton {
+    margin-left: 0.8rem;
+    flex-basis: 3%;
+    margin-right: 0.8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .searchBox:hover > .searchInput {
+    width: 300px;
+  }
+
+  /* RESULTS */
+
+  .dataResult {
+    width: 50vw;
+    height: 300px;
+  }
+
+  .dataResult .dataItem img {
+    width: 5%;
+    height: auto;
+    margin-left: 1rem;
+  }
+
+  .dataItem:hover {
+    background-color: #858585
+  }
+
+  .dataResult .dataItem .dataItemScore {
+    margin: 0 0 0 1.5rem;
+  }
+
+  .moreInfoButton {
+    margin-left: 4rem;
+    margin-right: 1rem;
+  }
+
+  .moreInfoButton button {
+    width: 9vw; 
+    font-size: 1rem;
+  }
+
+  .moreInfoButton button:hover {
+    background-color: lightgray;
+    color: #1f2b37;
+  }
 }

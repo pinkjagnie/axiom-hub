@@ -13,13 +13,13 @@ import "./SearchBar.css";
 const DUMMY_DATA = [
     {
       "aid": 1,
-      "app_name": "test",
+      "app_name": "test1",
       "perrmisions_score": 3.2,
       "privacy_score": 2.3,
       "rules_score": 3,
       "app_version": "1.2",
-      "app_privacy_report_link": "",
-      "app_rules_report_link": ""
+      "app_privacy_report_link": "www.google.pl",
+      "app_rules_report_link": "www.google.pl"
     },
     {
       "aid": 2,
@@ -118,9 +118,8 @@ const SearchBar = () => {
 
   return(
     <div className="searchSection">
-      {infoModalIsShown && <InfoModal onClose={hideInfoModalHandler} />}
       {legendModalIsShown && <LegendModal onClose={hideLegendModalHandler} />}
-      <div className="imageSection">
+      <div className="sloganSection">
         <h3>Check if your application is safe and if it cares about your safety</h3>
       </div>
       <div className="searchBox">
@@ -146,6 +145,7 @@ const SearchBar = () => {
                 <div className="moreInfoButton">
                   <button onClick={showInfoModal}>more</button>
                 </div>
+                {infoModalIsShown && <InfoModal onClose={hideInfoModalHandler} value={value}/>}
               </div>
         })}
       </div>}
