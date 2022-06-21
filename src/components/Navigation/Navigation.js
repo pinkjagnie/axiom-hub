@@ -9,17 +9,20 @@ const Navigation = () => {
 
   const [openMenu, setOpenMenu] = useState(false);
 
-  const hamburgerIcon = <CgMenuRound className="hamburger" onClick={() => setOpenMenu(true)} />;
+  const hamburgerIcon = <CgMenuRound className="mobileHamburger" onClick={() => setOpenMenu(true)} />;
 
-  const closeIcon = <CgCloseO className="hamburger" onClick={() => setOpenMenu(false)} />;
+  const closeIcon = <CgCloseO className="mobileHamburger" onClick={() => setOpenMenu(false)} />;
 
   const closeMenu = () => setOpenMenu(false);
 
   return(
     <div className="navBar">
-      <nav className="navigation">
+      <nav className="mobileNavigation">
         {openMenu ? closeIcon : hamburgerIcon}
         {openMenu && <NavLinks closeMenu={closeMenu} />}
+      </nav>
+      <nav className="desktopNavigation">
+        <NavLinks />
       </nav>
     </div>
   )
