@@ -18,7 +18,7 @@ const NavLinks = (props) => {
         <a href="#" target="_blank">About</a>
       </motion.li>
       <motion.li initial={animateFrom} animate={animateTo} transition={{delay: 0.20}} onClick={() => props.closeMenu()}>
-        <a href="#" target="_blank">Blog</a>
+        <a href="https://blog.axiomos.pl/" target="_blank" rel="noopener noreferrer">Blog</a>
       </motion.li>
     </ul>
   )

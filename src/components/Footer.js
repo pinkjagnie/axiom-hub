@@ -16,19 +16,19 @@ const Footer = () => {
           <p>Built with <GiPawHeart className={styles.author} /> by <span><a href="https://github.com/pinkjagnie" target="_blank" rel="noopener noreferrer" className={styles.author}>PinkJagnie</a></span></p>
         </div>
         <div className={styles.socialContainer}>
-          <a href="">
+          <a href="https://twitter.com/axiomos_aosp" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faTwitter} className={styles.social} />
           </a>
-          <a href="">
+          <a href="" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faGithub} className={styles.social} />
           </a>
-          <a href="">
+          <a href="https://t.me/axiomoshub" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faTelegram} className={styles.social} />
           </a>
-          <a href="">
+          <a href="" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faPaypal} className={styles.social} />
           </a>
-          <a href="">
+          <a href="" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faPatreon} className={styles.social} />
           </a>
         </div>

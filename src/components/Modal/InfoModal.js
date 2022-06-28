@@ -16,8 +16,8 @@ const InfoModal = (props) => {
           <p>Perrmisions score: {props.value.perrmisions_score}</p>
           <p>Privacy score: {props.value.privacy_score}</p>
           <p>Rules score: {props.value.rules_score}</p>
-          <p>App privacy report link: <a href={props.value.app_privacy_report_link} target="_blank">here</a></p>
-          <p>App rules report link: <a href={props.value.app_rules_report_link} target="_blank">here</a></p>
+          <p>App privacy report link: <a href={props.value.app_privacy_report_link} target="_blank" rel="noopener noreferrer">here</a></p>
+          <p>App rules report link: <a href={props.value.app_rules_report_link} target="_blank" rel="noopener noreferrer">here</a></p>
         </div>
         <div className={styles.infoModalLegend}>
           <p>Perrmisions score - it's Lorem ipsum dolor sit amet</p>

@@ -18,48 +18,48 @@ const DUMMY_DATA = [
       "privacy_score": 2.3,
       "rules_score": 3,
       "app_version": "1.2",
-      "app_privacy_report_link": "www.google.pl",
-      "app_rules_report_link": "www.google.pl"
+      "app_privacy_report_link": "http://www.google.pl",
+      "app_rules_report_link": "http://www.google.pl"
     },
     {
       "aid": 2,
-      "app_name": "test",
+      "app_name": "test22",
       "privacy_score": 2,
       "perrmisions_score": 3.2,
       "rules_score": 3,
       "app_version": "1.2",
-      "app_privacy_report_link": "",
-      "app_rules_report_link": ""
+      "app_privacy_report_link": "http://www.web.axiomos.pl",
+      "app_rules_report_link": "http://www.web.axiomos.pl"
     },
     {
       "aid": 3,
-      "app_name": "test",
+      "app_name": "test33",
       "privacy_score": 9,
       "perrmisions_score": 3,
       "rules_score": 6,
       "app_version": "1.2",
-      "app_privacy_report_link": "",
-      "app_rules_report_link": ""
+      "app_privacy_report_link": "http://www.onet.pl",
+      "app_rules_report_link": "http://www.onet.pl"
     },
     {
       "aid": 4,
-      "app_name": "test",
+      "app_name": "test44",
       "privacy_score": 3,
       "perrmisions_score": 3.2,
       "rules_score": 8.8,
       "app_version": "1.2",
-      "app_privacy_report_link": "",
-      "app_rules_report_link": ""
+      "app_privacy_report_link": "http://www.google.pl",
+      "app_rules_report_link": "http://www.google.pl"
     },
     {
       "aid": 5,
-      "app_name": "test",
+      "app_name": "test55",
       "privacy_score": 1,
       "perrmisions_score": 3.2,
       "rules_score": 5,
       "app_version": "1.2",
-      "app_privacy_report_link": "",
-      "app_rules_report_link": ""
+      "app_privacy_report_link": "http://www.test.pinkjagnie.pl",
+      "app_rules_report_link": "http://www.test.pinkjagnie.pl"
     }
 ];
 
