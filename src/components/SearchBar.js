@@ -8,7 +8,7 @@ import InfoModal from "./Modal/InfoModal";
 
 import hubImg from "../img/hub_300-300.png";
 
-import "./SearchBar.css";
+import "./searchBar.css";
 
 const DUMMY_DATA = [
     {

@@ -4,32 +4,32 @@ import { GiPawHeart } from "react-icons/gi";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter, faGithub, faTelegram, faPaypal, faPatreon } from "@fortawesome/free-brands-svg-icons";
 
-import "./Footer.css";
+import styles from "./footer.module.css";
 
 const Footer = () => { 
   return (
-    <div className="footerSection">
-      <div className="container">
-        <div className="copyright">
+    <div className={styles.footerSection}>
+      <div className={styles.container}>
+        <div className={styles.copyright}>
           <p>&copy; AxiomOS project</p>
-          <p>Want to contact with us? <a href="mailto:contact@axiomos.pl" className="mail">Just send us an email</a></p>
-          <p>Built with <GiPawHeart className="author" /> by <span className="author">PinkLlama</span></p>
+          <p>Want to contact with us? <a href="mailto:contact@axiomos.pl" className={styles.mail}>Just send us an email</a></p>
+          <p>Built with <GiPawHeart className={styles.author} /> by <span><a href="https://github.com/pinkjagnie" target="_blank" rel="noopener noreferrer" className={styles.author}>PinkJagnie</a></span></p>
         </div>
-        <div className="socialContainer">
+        <div className={styles.socialContainer}>
           <a href="">
-            <FontAwesomeIcon icon={faTwitter} className="social" />
+            <FontAwesomeIcon icon={faTwitter} className={styles.social} />
           </a>
           <a href="">
-            <FontAwesomeIcon icon={faGithub} className="social" />
+            <FontAwesomeIcon icon={faGithub} className={styles.social} />
           </a>
           <a href="">
-            <FontAwesomeIcon icon={faTelegram} className="social" />
+            <FontAwesomeIcon icon={faTelegram} className={styles.social} />
           </a>
           <a href="">
-            <FontAwesomeIcon icon={faPaypal} className="social" />
+            <FontAwesomeIcon icon={faPaypal} className={styles.social} />
           </a>
           <a href="">
-            <FontAwesomeIcon icon={faPatreon} className="social" />
+            <FontAwesomeIcon icon={faPatreon} className={styles.social} />
           </a>
         </div>
       </div>

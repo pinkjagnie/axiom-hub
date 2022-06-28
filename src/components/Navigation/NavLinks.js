@@ -2,7 +2,7 @@ import React from "react";
 
 import {motion} from "framer-motion";
 
-import "./Navigation.css";
+import styles from "./navigation.module.css";
 
 const NavLinks = (props) => {
 
