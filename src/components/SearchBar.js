@@ -68,6 +68,7 @@ const SearchBar = () => {
   const [wordEntered, setWordEntered] = useState("");
   const [infoModalIsShown, setInfoModalIsShown] = useState(false);
   const [legendModalIsShown, setLegendModalIsShown] = useState(false);
+  const [modalData, setModalData] = useState(null);
 
   const dataScoreClass = (score) => {
     if (score <=2) {
@@ -120,7 +121,7 @@ const SearchBar = () => {
     <div className="searchSection">
       {legendModalIsShown && <LegendModal onClose={hideLegendModalHandler} />}
       <div className="sloganSection">
-        <h3>Check if your application is safe and if it cares about your safety</h3>
+        <h3>Check if your application is safe and if it cares about your privacy</h3>
       </div>
       <div className="searchBox">
         <input type="text" placeholder="Type to search..." className="searchInput" value={wordEntered}
@@ -143,9 +144,12 @@ const SearchBar = () => {
                   <p>rules score</p>
                 </div>
                 <div className="moreInfoButton">
-                  <button onClick={showInfoModal}>more</button>
+                  <button onClick={ () => {
+                     showInfoModal();
+                     setModalData(value);
+                   }}>more</button>
                 </div>
-                {infoModalIsShown && <InfoModal onClose={hideInfoModalHandler} value={value}/>}
+                {infoModalIsShown && <InfoModal onClose={hideInfoModalHandler} modalData={modalData}/>}
               </div>
         })}
       </div>}

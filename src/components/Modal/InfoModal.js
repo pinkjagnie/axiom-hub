@@ -11,13 +11,13 @@ const InfoModal = (props) => {
       <div className={styles.infoModal}>
         <img src={closeBtn} alt="" className={styles.closeInfoModalButton} onClick={props.onClose}/>
         <div className={styles.infoModalText}>
-          <p>{props.value.app_name}</p>
-          <p>version: {props.value.app_version}</p>
-          <p>Perrmisions score: {props.value.perrmisions_score}</p>
-          <p>Privacy score: {props.value.privacy_score}</p>
-          <p>Rules score: {props.value.rules_score}</p>
-          <p>App privacy report link: <a href={props.value.app_privacy_report_link} target="_blank" rel="noopener noreferrer">here</a></p>
-          <p>App rules report link: <a href={props.value.app_rules_report_link} target="_blank" rel="noopener noreferrer">here</a></p>
+          <p>{props.modalData.app_name}</p>
+          <p>version: {props.modalData.app_version}</p>
+          <p>Perrmisions score: {props.modalData.perrmisions_score}</p>
+          <p>Privacy score: {props.modalData.privacy_score}</p>
+          <p>Rules score: {props.modalData.rules_score}</p>
+          <p>App privacy report link: <a href={props.modalData.app_privacy_report_link} target="_blank" rel="noopener noreferrer">here</a></p>
+          <p>App rules report link: <a href={props.modalData.app_rules_report_link} target="_blank" rel="noopener noreferrer">here</a></p>
         </div>
         <div className={styles.infoModalLegend}>
           <p>Perrmisions score - it's Lorem ipsum dolor sit amet</p>
