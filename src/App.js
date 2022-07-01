@@ -4,10 +4,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import SharedLayout from './components/SharedLayout';
 import Home from './components/Home';
 import SearchBar from "./components/SearchBar"
+import SingleApp from './components/SingleApp';
 import About from './components/About';
 import ErrorPage from './components/ErrorPage';
-
-import SingleApp from './components/SingleApp';
 
 class App extends Component {
   render() {
