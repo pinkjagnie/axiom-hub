@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import phonesImg from "../img/phones_400-300.png";
 
-import styles from "./home.module.css";
+import styles from "../components/home.module.css";
 
 const Home = () => {
   return(

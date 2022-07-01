@@ -1,12 +1,12 @@
 import React from "react";
 
-import Team from "./Team";
+import Team from "../components/Team";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTelegram } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
-import styles from "./about.module.css";
+import styles from "../components/about.module.css";
 
 const About = () => {
   return(

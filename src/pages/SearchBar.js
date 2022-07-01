@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faClose } from '@fortawesome/free-solid-svg-icons';
 
-import LegendModal from "./Modal/LegendModal";
+import LegendModal from "../components/Modal/LegendModal";
 
 import hubImg from "../img/hub_300-300.png";
 
-import "./searchBar.css";
+import "../components/searchBar.css";
 
 const DUMMY_DATA = [
   {

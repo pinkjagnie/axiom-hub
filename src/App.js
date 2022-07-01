@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import SharedLayout from './components/SharedLayout';
-import Home from './components/Home';
-import SearchBar from "./components/SearchBar"
-import SingleApp from './components/SingleApp';
-import About from './components/About';
-import ErrorPage from './components/ErrorPage';
+import SharedLayout from './components/ui/SharedLayout';
+import Home from './pages/Home';
+import SearchBar from "./pages/SearchBar"
+import SingleApp from './pages/SingleApp';
+import About from './pages/About';
+import ErrorPage from './pages/ErrorPage';
 
 class App extends Component {
   render() {

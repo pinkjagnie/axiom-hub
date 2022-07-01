@@ -5,7 +5,7 @@ import hubIcon from "../img/hub_300-300.png";
 import { MdReadMore } from "react-icons/md";
 import { FaClipboardList, FaQuestionCircle } from "react-icons/fa";
 
-import styles from "./singleApp.module.css";
+import styles from "../components/singleApp.module.css";
 
 const data = [
   {
