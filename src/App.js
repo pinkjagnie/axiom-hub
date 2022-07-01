@@ -1,19 +1,28 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Header from './components/Header';
-import SearchBar from './components/SearchBar';
-import Footer from './components/Footer';
+import SharedLayout from './components/SharedLayout';
+import Home from './components/Home';
+import SearchBar from "./components/SearchBar"
+import About from './components/About';
+import ErrorPage from './components/ErrorPage';
 
-import './App.css';
+import SingleApp from './components/SingleApp';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Header />
-        <SearchBar />
-        <Footer />
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<SharedLayout />}>
+            <Route index element={<Home />} />
+            <Route path='apps' element={<SearchBar />} />
+            <Route path='apps/:appId' element={<SingleApp />} />
+            <Route path='about' element={<About />} />
+          </Route>
+          <Route path='*' element={<ErrorPage />} />
+        </Routes>
+      </BrowserRouter>
     );
   }
 }

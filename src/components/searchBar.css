@@ -179,7 +179,7 @@
   margin-right: 0.5rem;
 }
 
-.moreInfoButton button {
+.moreInfoButton .link {
   display: block;
   /* width: 5vw; */
   margin: 0.5rem auto;
@@ -190,6 +190,7 @@
   color: white;
   font-size: 0.8rem;
   font-weight: bold;
+  text-decoration: none;
   cursor: pointer;
 }
 
@@ -267,14 +268,15 @@
   .moreInfoButton {
     margin-left: 4rem;
     margin-right: 1rem;
+    text-align: center;
   }
 
-  .moreInfoButton button {
+  .moreInfoButton .link {
     width: 9vw; 
     font-size: 1rem;
   }
 
-  .moreInfoButton button:hover {
+  .moreInfoButton .link:hover {
     background-color: lightgray;
     color: #1f2b37;
   }

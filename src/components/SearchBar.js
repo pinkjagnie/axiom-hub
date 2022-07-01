@@ -1,74 +1,78 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faClose } from '@fortawesome/free-solid-svg-icons';
 
 import LegendModal from "./Modal/LegendModal";
-import InfoModal from "./Modal/InfoModal";
 
 import hubImg from "../img/hub_300-300.png";
 
 import "./searchBar.css";
 
 const DUMMY_DATA = [
-    {
-      "aid": 1,
-      "app_name": "test1",
-      "perrmisions_score": 3.2,
-      "privacy_score": 2.3,
-      "rules_score": 3,
-      "app_version": "1.2",
-      "app_privacy_report_link": "http://www.google.pl",
-      "app_rules_report_link": "http://www.google.pl"
-    },
-    {
-      "aid": 2,
-      "app_name": "test22",
-      "privacy_score": 2,
-      "perrmisions_score": 3.2,
-      "rules_score": 3,
-      "app_version": "1.2",
-      "app_privacy_report_link": "http://www.web.axiomos.pl",
-      "app_rules_report_link": "http://www.web.axiomos.pl"
-    },
-    {
-      "aid": 3,
-      "app_name": "test33",
-      "privacy_score": 9,
-      "perrmisions_score": 3,
-      "rules_score": 6,
-      "app_version": "1.2",
-      "app_privacy_report_link": "http://www.onet.pl",
-      "app_rules_report_link": "http://www.onet.pl"
-    },
-    {
-      "aid": 4,
-      "app_name": "test44",
-      "privacy_score": 3,
-      "perrmisions_score": 3.2,
-      "rules_score": 8.8,
-      "app_version": "1.2",
-      "app_privacy_report_link": "http://www.google.pl",
-      "app_rules_report_link": "http://www.google.pl"
-    },
-    {
-      "aid": 5,
-      "app_name": "test55",
-      "privacy_score": 1,
-      "perrmisions_score": 3.2,
-      "rules_score": 5,
-      "app_version": "1.2",
-      "app_privacy_report_link": "http://www.test.pinkjagnie.pl",
-      "app_rules_report_link": "http://www.test.pinkjagnie.pl"
-    }
+  {
+    "aid": 1,
+    "app_name": "test1",
+    "package_name": "com.test.telegram",
+    "perrmisions_score": 3.2,
+    "privacy_score": 2.3,
+    "rules_score": 3,
+    "app_version": "1.2",
+    "app_privacy_report_link": "http://www.google.pl",
+    "app_rules_report_link": "http://www.google.pl"
+  },
+  {
+    "aid": 2,
+    "app_name": "test22",
+    "package_name": "com.test.instagram",
+    "privacy_score": 2,
+    "perrmisions_score": 3.2,
+    "rules_score": 3,
+    "app_version": "1.2",
+    "app_privacy_report_link": "http://www.web.axiomos.pl",
+    "app_rules_report_link": "http://www.web.axiomos.pl"
+  },
+  {
+    "aid": 3,
+    "app_name": "test33",
+    "package_name": "com.test.facebook",
+    "privacy_score": 9,
+    "perrmisions_score": 3,
+    "rules_score": 6,
+    "app_version": "1.2",
+    "app_privacy_report_link": "http://www.onet.pl",
+    "app_rules_report_link": "http://www.onet.pl"
+  },
+  {
+    "aid": 4,
+    "app_name": "test44",
+    "package_name": "com.test.whatsup",
+    "privacy_score": 3,
+    "perrmisions_score": 3.2,
+    "rules_score": 8.8,
+    "app_version": "1.2",
+    "app_privacy_report_link": "http://www.google.pl",
+    "app_rules_report_link": "http://www.google.pl"
+  },
+  {
+    "aid": 5,
+    "app_name": "test55",
+    "package_name": "com.test.chrome",
+    "privacy_score": 1,
+    "perrmisions_score": 3.2,
+    "rules_score": 5,
+    "app_version": "1.2",
+    "app_privacy_report_link": "http://www.test.pinkjagnie.pl",
+    "app_rules_report_link": "http://www.test.pinkjagnie.pl"
+  }
 ];
+
 
 const SearchBar = () => {
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
-  const [infoModalIsShown, setInfoModalIsShown] = useState(false);
   const [legendModalIsShown, setLegendModalIsShown] = useState(false);
-  const [modalData, setModalData] = useState(null);
 
   const dataScoreClass = (score) => {
     if (score <=2) {
@@ -99,14 +103,6 @@ const SearchBar = () => {
   const clearInput = () => {
     setFilteredData([]);
     setWordEntered("");
-  };
-
-  const hideInfoModalHandler = () => {
-    setInfoModalIsShown(false);
-  };
-
-  const showInfoModal = () => {
-    setInfoModalIsShown(true)
   };
 
   const hideLegendModalHandler = () => {
@@ -144,12 +140,8 @@ const SearchBar = () => {
                   <p>rules score</p>
                 </div>
                 <div className="moreInfoButton">
-                  <button onClick={ () => {
-                     showInfoModal();
-                     setModalData(value);
-                   }}>more</button>
+                  <Link to={`/apps/${value.package_name}`} className="link"> more</Link>
                 </div>
-                {infoModalIsShown && <InfoModal onClose={hideInfoModalHandler} modalData={modalData}/>}
               </div>
         })}
       </div>}

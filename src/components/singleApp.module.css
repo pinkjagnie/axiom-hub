@@ -1,0 +1,72 @@
+.singleAppSection {
+  width: 100%;
+  min-height: 100vh;
+  color: whitesmoke;
+  overflow: hidden;
+}
+
+.singleAppSection .infoContainer {
+  width: 70vw;
+  padding-top: 2rem;
+  margin: 0 auto;
+}
+
+.appTitle {
+  display: flex;
+  width: 80vw;
+}
+
+.appTitle img {
+  height: auto;
+  width: 30%;
+  padding-right: 1.5rem;
+}
+
+.icon {
+  color: whitesmoke;
+  padding-right: 0.5rem;
+}
+
+.infoText a {
+  color: whitesmoke;
+}
+
+.infoLegend {
+  padding: 1.5rem 0;
+}
+
+.infoLegend p {
+  font-size: 0.8rem;
+}
+
+.linkContainer {
+  padding: 1rem 0 4rem 0;
+  text-align: center;
+}
+
+.link {			 
+  padding: 10px 20px;
+  margin: 20px 0;
+  color: whitesmoke;
+  background: #39ac31;
+  text-decoration: none;
+}
+
+@media (min-width: 410px) {
+  .infoLegend p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .appTitle img {
+    height: auto;
+    width: 12%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .singleAppSection .infoContainer {
+    width: 50vw;
+  }
+}
