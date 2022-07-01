@@ -140,7 +140,7 @@ const SearchBar = () => {
                   <p>rules score</p>
                 </div>
                 <div className="moreInfoButton">
-                  <Link to={`/apps/${value.package_name}`} className="link"> more</Link>
+                  <Link to={`/reports/${value.package_name}`} className="link"> more</Link>
                 </div>
               </div>
         })}

@@ -95,7 +95,7 @@ const SingleApp = () => {
         </div>
       </div>
       <div className={styles.linkContainer}>
-        <Link to='/' className={styles.link}>Keep looking</Link>
+        <Link to='/reports' className={styles.link}>Keep looking</Link>
       </div>
     </div>   
   );

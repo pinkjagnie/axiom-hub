@@ -16,7 +16,7 @@ const NavLinks = (props) => {
         <Link to="/" className={styles.link}>Home</Link>
       </motion.li>
       <motion.li initial={animateFrom} animate={animateTo} transition={{delay: 0.05}} onClick={() => props.closeMenu()}>
-        <Link to="/apps" className={styles.link}>Reports</Link>
+        <Link to="/reports" className={styles.link}>Reports</Link>
       </motion.li>
       <motion.li initial={animateFrom} animate={animateTo} transition={{delay: 0.10}} onClick={() =>  props.closeMenu()}>
         <Link to='/about' className={styles.link}>About</Link>

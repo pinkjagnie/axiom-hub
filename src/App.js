@@ -16,8 +16,8 @@ class App extends Component {
         <Routes>
           <Route path='/' element={<SharedLayout />}>
             <Route index element={<Home />} />
-            <Route path='apps' element={<SearchBar />} />
-            <Route path='apps/:appId' element={<SingleApp />} />
+            <Route path='reports' element={<SearchBar />} />
+            <Route path='reports/:appId' element={<SingleApp />} />
             <Route path='about' element={<About />} />
           </Route>
           <Route path='*' element={<ErrorPage />} />

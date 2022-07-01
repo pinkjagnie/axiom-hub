@@ -14,7 +14,7 @@ const Home = () => {
           <h1>AxiomOS Hub - place where you will check if your application is safe and if it cares about your privacy</h1>
           <p>Feel free to search the app list or meet our team</p>
           <div className={styles.linkContainer}>
-            <Link to='/apps' className={styles.link}>Look for app</Link>
+            <Link to='/reports' className={styles.link}>Look for app</Link>
             <Link to="/about" className={styles.link}>Meet our team</Link>
           </div>
         </div>
