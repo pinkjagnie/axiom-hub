@@ -106,6 +106,10 @@
   .linkContainer {
     width: 40vw;
   }
+
+  .link:hover {
+    background-color: #656565;
+  }
 }
 
 @media (min-width: 1280px) {

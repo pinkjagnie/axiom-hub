@@ -202,6 +202,12 @@
     font-size: 1.8rem;
   }
 
+  .socialContainer a:hover, 
+  .socialContainer a:hover .social,
+  .social:hover {
+    color: #47b93d;
+  }
+
   .members {
     display: flex;
     width: 80vw;
@@ -214,6 +220,16 @@
     width: 35vw;
     height: 35vh;
   }
+
+  .profilePicture {
+    width: 80px;
+    height: 80px;
+  }
+
+  .profilePicture img {
+    width: 80px;
+    height: 80px;
+  }  
 }
 
 @media (min-width: 1280px) {
@@ -230,8 +246,22 @@
     height: 30vh;
   }
 
+  .profilePicture {
+    width: 90px;
+    height: 90px;
+  }
+
+  .profilePicture img {
+    width: 90px;
+    height: 90px;
+  }  
+
   .name {
     width: 25vw;
+  }
+
+  .welcome {
+    padding-top: 0.5rem;
   }
 
   .welcome p:nth-of-type(2),
