@@ -2,12 +2,16 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import useInput from "../hooks/use-input";
 
+import ErrorModal from "../components/Modal/ErrorModal";
+
 import styles from "../components/addSingleApp.module.css";
 
 const isNotEmpty = (value) => value.trim() !== '';
 const isUrl = (value) => value.includes('play.google.com/');
 
 const AddSingleApp = () => {
+  const [modalIsShown, setModalIsShown] = useState(false);
+  const [errorMessage, setErrorMessage] = useState();
 
   const {
     value: nameValue,
@@ -29,7 +33,37 @@ const AddSingleApp = () => {
 
   let formIsValid = false;
 
-  // POST
+  const hideModalHandler = () => {
+    setModalIsShown(false);
+  };
+
+  async function addApp(nameValue, urlValue) {
+    let errorModalMessage = '';
+    const response = await fetch('https://axiomos-hub-default-rtdb.europe-west1.firebasedatabase.app/addNewApp.json', {
+      method: 'POST',
+      // mode: 'cors',
+      body: JSON.stringify({
+        name: nameValue,
+        url: urlValue
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then((res) => {
+      if (res.ok) {
+        setModalIsShown(true);
+        errorModalMessage = '';
+        setErrorMessage(errorModalMessage)
+      } else {
+        return res.json().then((data) => {
+          setModalIsShown(true);
+          errorModalMessage = data.error;
+          setErrorMessage(errorModalMessage)
+        });
+      }
+    })
+  };
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -42,7 +76,7 @@ const AddSingleApp = () => {
 
     console.log(nameValue, urlValue);
 
-    // POST
+    addApp(nameValue, urlValue);
 
     resetName();
     resetUrl();
@@ -63,6 +97,7 @@ const AddSingleApp = () => {
         <p>Fill in the form and we will add this application to the database</p>
       </div>
 
+      {modalIsShown && <ErrorModal onClose={hideModalHandler} errorMessage={errorMessage} />}
       <form className={styles.form} onSubmit={submitHandler}>
         <div className={styles.control}>
           <label htmlFor="name" style={nameLabelClass}>Name of the application package</label>
