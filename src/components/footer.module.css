@@ -123,6 +123,10 @@
     font-size: 1.2rem;
   }
 
+  .mail:hover {
+    color: whitesmoke;
+  }
+
   .social {
     font-size: 2rem;
   }
