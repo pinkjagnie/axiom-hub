@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import useInput from "../hooks/use-input";
 
 import styles from "../components/addSingleApp.module.css";
@@ -48,6 +49,11 @@ const AddSingleApp = () => {
     formIsValid = false;
   };
 
+  const nameLabelClass = nameHasError ? {color: '#9b0000'} : undefined;
+  const nameInputClass = nameHasError ? {border: '2px solid #9b0000'} : undefined;
+
+  const urlLabelClass = urlHasError ? {color: '#9b0000'} : undefined;
+  const urlInputClass = urlHasError ? {border: '2px solid #9b0000'} : undefined;
 
   return(
     <div className={styles.addSingleAppContainer}>
@@ -59,16 +65,18 @@ const AddSingleApp = () => {
 
       <form className={styles.form} onSubmit={submitHandler}>
         <div className={styles.control}>
-          <label htmlFor="name" style={nameHasError ? {color: '#9b0000'} : undefined}>Name of the application package</label>
-          <input type="text" id="name" value={nameValue} onChange={nameChangeHandler} onBlur={nameBlurHandler} style={nameHasError ? {borderColor: '#9b0000'} : undefined} />
+          <label htmlFor="name" style={nameLabelClass}>Name of the application package</label>
+          <input type="text" id="name" value={nameValue} onChange={nameChangeHandler} onBlur={nameBlurHandler} style={nameInputClass} />
         </div>
         <div className={styles.control}>
-          <label htmlFor="url" style={urlHasError ? {color: '#9b0000'} : undefined}>Link to the package in Google Play</label>
-          <input type="url" id="url" value={urlValue} onChange={urlChangeHandler} onBlur={urlBlurHandler} style={urlHasError ? {borderColor: '#9b0000'} : undefined} />
+          <label htmlFor="url" style={urlLabelClass}>Link to the package in Google Play</label>
+          <input type="url" id="url" value={urlValue} onChange={urlChangeHandler} onBlur={urlBlurHandler} style={urlInputClass} />
         </div>
         <button>Submit</button>
       </form>
-
+      <div className={styles.linkContainer}>
+        <Link to='/reports' className={styles.link}>Go to search for Reports</Link>
+      </div>
     </div>
   )
 };
