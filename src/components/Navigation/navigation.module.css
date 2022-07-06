@@ -86,10 +86,10 @@
 
   .navBar {
     position: fixed;
-    top: 2%;
+    top: 3%;
     right: 0;
     height: 80px;
-    width: 50vw;
+    width: 60vw;
     display: flex;
     justify-content: center;
     align-items: center;
