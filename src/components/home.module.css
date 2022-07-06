@@ -11,7 +11,7 @@
 
 .sloganContainer img {
   display: block;
-  width: 90%;
+  width: 80%;
   height: auto;
   margin: 0 auto;
 }
@@ -30,6 +30,7 @@
 .linkContainer {
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
 }
 
 .link {			 
@@ -54,6 +55,10 @@
     padding: 1rem 0 0.8rem 0;
   }
 
+  .linkContainer {
+    padding-bottom: 2rem;
+  }
+
   .link {
     font-size: 1rem;
   }
@@ -68,6 +73,10 @@
 @media (min-width: 600px) {
   .homeSection {
     min-height: 70vh;
+  }
+
+  .linkContainer {
+    width: 50vw;
   }
 }
 
@@ -97,6 +106,11 @@
     display: flex; 
   }
 
+  .sloganContainer img {
+    width: 50%;
+    height: auto;
+  }
+
   .textContainer {
     width: 60vw;
     padding-top: 2rem;
@@ -119,8 +133,9 @@
   }
 
   .sloganContainer img {
-    width: 50%;
+    width: 45%;
     height: auto;
+    margin-top: 0
   }
 
   .linkContainer {

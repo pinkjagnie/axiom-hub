@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faClose } from '@fortawesome/free-solid-svg-icons';
 
 import LegendModal from "../components/Modal/LegendModal";
+import AddSingleApp from "./AddSingleApp";
 
 import hubImg from "../img/hub_300-300.png";
 
@@ -113,11 +114,19 @@ const SearchBar = () => {
     setLegendModalIsShown(true)
   };
 
+  const addApp = <div className="linkContainer">
+    <p>Didn't find what you are looking for?</p>
+    <Link to="/add-app" element={<AddSingleApp/>} className="link">Add app to our database</Link>
+    </div>;
+
   return(
     <div className="searchSection">
       {legendModalIsShown && <LegendModal onClose={hideLegendModalHandler} />}
       <div className="sloganSection">
         <h3>Check if your application is safe and if it cares about your privacy</h3>
+      </div>
+      <div>
+        {filteredData.length === 0 ? addApp : undefined}
       </div>
       <div className="searchBox">
         <input type="text" placeholder="Type to search..." className="searchInput" value={wordEntered}

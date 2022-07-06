@@ -22,6 +22,29 @@
   color: whitesmoke;
 }
 
+.linkContainer {
+  width: 65vw;
+  height: auto;
+  padding-top: 3rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.linkContainer p {
+  padding-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+.link {			 
+  display: block;
+  padding: 10px 20px;
+  margin: 0 auto;
+  color: whitesmoke;
+  background: #39ac31;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
 .searchBox {
   position: absolute;
   top: 40vh;
@@ -195,6 +218,30 @@
 }
 
 
+@media (min-width: 360px) {
+  .linkContainer {
+    width: 60vw;
+    height: auto;
+  }
+}
+
+@media (min-width: 390px) {
+  .linkContainer {
+    width: 55vw;
+    height: auto;
+  }
+}
+
+@media (min-width: 410px) {
+  .linkContainer p {
+    font-size: 1.2rem;
+  }
+  
+  .link {			 
+    font-size: 1rem;
+  }
+}
+
 @media (min-width: 600px) {
   .searchInput {
     font-size: 20px;
@@ -239,9 +286,34 @@
   }
 }
 
+@media (min-width: 768px) {
+  .linkContainer {
+    width: 50vw;
+    height: auto;
+    /* padding-top: 1.5rem; */
+  }
+  
+  .linkContainer p {
+    font-size: 1.5rem;
+  }
+  
+  .link {			 
+    font-size: 1.3rem;
+  }
+}
+
 @media (min-width: 1024px) {
   .searchBox:hover > .searchInput {
     width: 300px;
+  }
+
+  .linkContainer {
+    width: 30vw;
+    height: auto;
+  }
+
+  .link:hover {
+    background-color: #656565;
   }
 
   /* RESULTS */

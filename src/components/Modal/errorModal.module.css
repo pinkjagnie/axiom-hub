@@ -52,6 +52,11 @@
 }
 
 @media (min-width: 360px) {
+  .modal {
+    top: 20vh;
+    left: calc(50% - 35vw);
+  }
+  
   .text {
     padding: 2.5rem;
   }
@@ -61,7 +66,19 @@
   }
 }
 
+@media (min-width: 410px) {
+  .modal {
+    width: 60vw;
+    min-height: 45vh;
+  }
+}
+
 @media (min-width: 600px) {
+  .modal {
+    width: 60vw;
+    left: calc(50% - 32vw);
+  }
+
   .text {
     padding: 3rem;
   }
@@ -72,11 +89,6 @@
 }
 
 @media (min-width: 768px) {
-  .modal {
-    width: 60vw;
-    left: calc(50% - 30vw);
-  }
-
   .closing {
     margin: 1.8rem auto;
   }
@@ -101,6 +113,14 @@
   .closing:hover {
     background-color: #656565;
     color: white;
+  }
+}
+
+@media (min-width: 1280px) {
+  .modal {
+    width: 40vw;
+    top: 30vh;
+    left: calc(50% - 22vw);
   }
 }
 

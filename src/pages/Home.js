@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import phonesImg from "../img/phones_400-300.png";
+import phonesImg from "../img/phones_800-600.png";
 
 import styles from "../components/home.module.css";
 
