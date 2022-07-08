@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import Navigation from "./Navigation/Navigation";
 
@@ -8,7 +9,7 @@ import styles from "./header.module.css";
 const Header = () => {
   return (
     <header className={styles.header}>
-      <img src={logo} alt="AxiomOS logo" className={styles.logo} />
+      <Link to='/'><img src={logo} alt="AxiomOS logo" className={styles.logo} /></Link>
       <Navigation />
     </header>
   );
