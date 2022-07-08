@@ -28,7 +28,7 @@ const Team = () => {
             </div>
             <div className={styles.welcome}>
               <p>@pinkjagnie</p>
-              <p>Frontend developer</p>
+              <p>Frontend dev, lawyer</p>
             </div>
           </div>
           <p className={styles.aboutMember}>Just some React and CSS. Here also as a graphic artist and UI designer</p>
@@ -54,7 +54,7 @@ const Team = () => {
             </div>
             <div className={styles.welcome}>
               <p>@pinkjagnie</p>
-              <p>Frontend developer</p>
+              <p>Frontend dev, lawyer</p>
             </div>
           </div>
           <p className={styles.aboutMember}>Just some React and CSS. Here also as a graphic artist and UI designer</p>
