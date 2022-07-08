@@ -8,7 +8,7 @@
 
 .description {
   width: 80vw;
-  padding: 1.5rem;
+  padding: 1.5rem 0 0.5rem 0;
   margin: 0 auto;
 }
 
@@ -28,6 +28,22 @@
 
 .aboutUs p:nth-child(1) {
   font-weight: bold;
+}
+
+.axiomContainer {
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.link {			 
+  display: block;
+  width: 35vw;
+  padding: 10px 20px;
+  margin: 0 auto;
+  color: whitesmoke;
+  background: #39ac31;
+  text-decoration: none;
+  font-size: 0.8rem;
 }
 
 .contactContainer {
@@ -124,6 +140,10 @@
 
 
 @media (min-width: 360px) and (min-height: 740px) {
+  .link {
+    font-size: 1rem;
+  }
+
   .teamMember {
     min-height: 25vh;
   }
@@ -183,12 +203,28 @@
 }
 
 @media (min-width: 768px) {
+  .link {
+    font-size: 1.2rem;
+  }
+
   .description {
     width: 70vw;
   }
 }
 
 @media (min-width: 1024px) {
+  .axiomContainer {
+    padding-bottom: 2.5rem;
+  }
+  
+  .link {
+    width: 25vw;
+  }
+
+  .link:hover {
+    background-color: #656565;
+  }
+
   .description {
     width: 60vw;
   }

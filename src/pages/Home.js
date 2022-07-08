@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import phonesImg from "../img/phones_800-600.png";
+import phonesImg from "../img/phones_800-800.png";
 
 import styles from "../components/home.module.css";
 
@@ -16,6 +16,9 @@ const Home = () => {
           <div className={styles.linkContainer}>
             <Link to='/reports' className={styles.link}>Look for app</Link>
             <Link to="/about" className={styles.link}>Meet our team</Link>
+          </div>
+          <div className={styles.axiomContainer}>
+            <a href="https://axiomos.pl" target="_blank" rel="noopener noreferrer" className={styles.link}>Go to AxiomOS</a>
           </div>
         </div>
       </div>

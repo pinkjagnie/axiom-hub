@@ -24,6 +24,10 @@ const About = () => {
           </div>
         </div>
 
+        <div className={styles.axiomContainer}>
+          <a href="https://axiomos.pl" target="_blank" rel="noopener noreferrer" className={styles.link}>Go to AxiomOS</a>
+        </div>
+
         <div className={styles.contactContainer}>
           <p>Wanna contact with us?</p>
           <div className={styles.socialContainer}>
