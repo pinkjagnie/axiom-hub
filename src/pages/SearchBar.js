@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -11,69 +11,11 @@ import hubImg from "../img/hub_300-300.png";
 
 import "../components/searchBar.css";
 
-const DUMMY_DATA = [
-  {
-    "aid": 1,
-    "app_name": "test1",
-    "package_name": "com.test.telegram",
-    "perrmisions_score": 3.2,
-    "privacy_score": 2.3,
-    "rules_score": 3,
-    "app_version": "1.2",
-    "app_privacy_report_link": "http://www.google.pl",
-    "app_rules_report_link": "http://www.google.pl"
-  },
-  {
-    "aid": 2,
-    "app_name": "test22",
-    "package_name": "com.test.instagram",
-    "privacy_score": 2,
-    "perrmisions_score": 3.2,
-    "rules_score": 3,
-    "app_version": "1.2",
-    "app_privacy_report_link": "http://www.web.axiomos.pl",
-    "app_rules_report_link": "http://www.web.axiomos.pl"
-  },
-  {
-    "aid": 3,
-    "app_name": "test33",
-    "package_name": "com.test.facebook",
-    "privacy_score": 9,
-    "perrmisions_score": 3,
-    "rules_score": 6,
-    "app_version": "1.2",
-    "app_privacy_report_link": "http://www.onet.pl",
-    "app_rules_report_link": "http://www.onet.pl"
-  },
-  {
-    "aid": 4,
-    "app_name": "test44",
-    "package_name": "com.test.whatsup",
-    "privacy_score": 3,
-    "perrmisions_score": 3.2,
-    "rules_score": 8.8,
-    "app_version": "1.2",
-    "app_privacy_report_link": "http://www.google.pl",
-    "app_rules_report_link": "http://www.google.pl"
-  },
-  {
-    "aid": 5,
-    "app_name": "test55",
-    "package_name": "com.test.chrome",
-    "privacy_score": 1,
-    "perrmisions_score": 3.2,
-    "rules_score": 5,
-    "app_version": "1.2",
-    "app_privacy_report_link": "http://www.test.pinkjagnie.pl",
-    "app_rules_report_link": "http://www.test.pinkjagnie.pl"
-  }
-];
-
-
 const SearchBar = () => {
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
   const [legendModalIsShown, setLegendModalIsShown] = useState(false);
+  const [data, setData] = useState([]);
 
   const dataScoreClass = (score) => {
     if (score <=2) {
@@ -87,10 +29,29 @@ const SearchBar = () => {
     };
   };
 
+  async function fetchReports() {
+    const response = await fetch('http://192.168.43.12:27451/api/reports', {
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then((res) => {
+      return res.json()
+    })
+    .then((myJson) => {setData(myJson)})
+  };
+
+  useEffect(() => {
+    fetchReports()},
+    []
+  );
+
   const handleFilter = (event) => {
     const searchWord = event.target.value;
     setWordEntered(searchWord);
-    const newFilter = DUMMY_DATA.filter((value) => {
+
+    const newFilter = data.reports.filter((value) => {
       return value.app_name.toLowerCase().includes(searchWord.toLowerCase());
     });
 
@@ -129,7 +90,7 @@ const SearchBar = () => {
         {filteredData.length === 0 ? addApp : undefined}
       </div>
       <div className="searchBox">
-        <input type="text" placeholder="Type to search..." className="searchInput" value={wordEntered}
+        <input type="text" placeholder="Type to search..." autoFocus className="searchInput" value={wordEntered}
           onChange={handleFilter}/>
         <div className="button">
           {filteredData.length === 0 ? <FontAwesomeIcon icon={faSearch} className='searchIcon' /> : <FontAwesomeIcon icon={faClose} className='closeIcon' onClick={clearInput} />}
@@ -137,7 +98,7 @@ const SearchBar = () => {
       </div>
       {filteredData.length != 0 && <div className="dataResult">
         {filteredData.slice(0, 15).map((value, key) => {
-          return <div className="dataItem" key={value.aid}>
+          return <div className="dataItem" key={value.ID}>
                 <img src={hubImg} alt="application" />
                 <p>{value.app_name}</p>
                 <div className={dataScoreClass(value.privacy_score)} onClick={showLegendModal}> 
