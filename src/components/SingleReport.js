@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import ScrollToTop from "./ui/ScrollToTop";
 import hubIcon from "../img/hub_300-300.png";
 
 import { MdReadMore } from "react-icons/md";
@@ -11,6 +12,7 @@ import styles from "../components/singleApp.module.css";
 const SingleReport = (props) => {
   return(
     <>
+    <ScrollToTop />
     <div className={styles.infoContainer}>
       <div className={styles.infoText}>
         <div className={styles.appTitle}>
@@ -23,7 +25,7 @@ const SingleReport = (props) => {
           </div>
         </div>
         <h2><FaClipboardList className={styles.icon}/> Scores</h2>
-        <p>Perrmisions score: {props.data.report.perrmisions_score}</p>
+        <p>Permissions score: {props.data.report.perrmisions_score}</p>
         <p>Privacy score: {props.data.report.privacy_score}</p>
         <p>Rules score: {props.data.report.rules_score}</p>
         <h2><MdReadMore className={styles.icon}/> More to know</h2>
