@@ -7,23 +7,20 @@ import styles from "../components/singleApp.module.css";
 
 const SingleApp = () => {
   const [singleData, setSingleData] = useState();
-  const { appId } = useParams();
+  const { package_name } = useParams();
 
-  async function fetchSingleReport(package_name) {
+  useEffect(() => {
     const url = `http://192.168.43.12:27451/api/reports/${package_name}`;
-    await fetch(url, {
+
+    fetch(url, {
       mode: 'cors',
       headers: {
         'Content-Type': 'application/json'
       }
     })
-    .then((response) => {
-      return response.clone().json();
-    })
-    .then((data) => {setSingleData(data)})
-  };
- 
-  fetchSingleReport(appId);
+    .then(res => res.json())
+    .then(data => setSingleData(data))
+}, [package_name]);
 
   return ( 
     <div className={styles.singleAppSection}> 

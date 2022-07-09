@@ -16,6 +16,7 @@ const SingleReport = (props) => {
         <div className={styles.appTitle}>
           <img src={hubIcon} alt="app icon"/>
           <h1>{props.data.report.app_name}</h1>
+          <p>{props.data.report.package_name}</p>
         </div>
         <p>version: {props.data.report.app_version}</p>
         <h2><FaClipboardList className={styles.icon}/> Scores</h2>
