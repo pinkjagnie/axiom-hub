@@ -10,7 +10,7 @@ const SingleApp = () => {
   const { package_name } = useParams();
 
   useEffect(() => {
-    const url = `http://192.168.43.12:27451/api/reports/${package_name}`;
+    const url = `https://test.axiomos.pl/api/reports/${package_name}`;
 
     fetch(url, {
       mode: 'cors',

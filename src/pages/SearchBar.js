@@ -30,7 +30,7 @@ const SearchBar = () => {
   };
 
   async function fetchReports() {
-    const response = await fetch('http://192.168.43.12:27451/api/reports', {
+    const response = await fetch('https://test.axiomos.pl/api/reports', {
       mode: 'cors',
       headers: {
         'Content-Type': 'application/json'
