@@ -16,6 +16,7 @@ const SearchBar = () => {
   const [wordEntered, setWordEntered] = useState("");
   const [legendModalIsShown, setLegendModalIsShown] = useState(false);
   const [data, setData] = useState([]);
+  const [addSingleApp, setAddSingleApp] = useState(false);
 
   const dataScoreClass = (score) => {
     if (score <=2) {
@@ -57,14 +58,17 @@ const SearchBar = () => {
 
     if (searchWord === "") {
       setFilteredData([]);
+      setAddSingleApp(false);
     } else {
       setFilteredData(newFilter);
+      setAddSingleApp(true);
     }
   };
 
   const clearInput = () => {
     setFilteredData([]);
     setWordEntered("");
+    setAddSingleApp(false);
   };
 
   const hideLegendModalHandler = () => {
@@ -87,7 +91,7 @@ const SearchBar = () => {
         <h3>Check if your application is safe and if it cares about your privacy</h3>
       </div>
       <div>
-        {filteredData.length === 0 ? addApp : undefined}
+        {addSingleApp ? addApp : undefined}
       </div>
       <div className="searchBox">
         <input type="text" placeholder="Type to search..." autoFocus className="searchInput" value={wordEntered}
