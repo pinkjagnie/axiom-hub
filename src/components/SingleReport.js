@@ -25,9 +25,18 @@ const SingleReport = (props) => {
           </div>
         </div>
         <h2><FaClipboardList className={styles.icon}/> Scores</h2>
-        <p>Permissions score: {props.data.report.perrmisions_score}</p>
-        <p>Privacy score: {props.data.report.privacy_score}</p>
-        <p>Rules score: {props.data.report.rules_score}</p>
+        <div className={styles.scoreContainer}>
+          <p>Permissions score:</p>
+          <p className={styles.score}>{props.data.report.permissions_score}</p>
+        </div>
+        <div className={styles.scoreContainer}>
+          <p>Privacy score:</p>
+          <p className={styles.score}>{props.data.report.privacy_score}</p>
+        </div>
+        <div className={styles.scoreContainer}>
+          <p>Rules score:</p>
+          <p className={styles.score}>{props.data.report.rules_score}</p>
+        </div>
         <h2><MdReadMore className={styles.icon}/> More to know</h2>
         <div className={styles.numberContainer}>
           <div className={styles.number}><p>{props.data.report.trackers_count}</p></div>

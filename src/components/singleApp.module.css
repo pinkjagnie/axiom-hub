@@ -21,14 +21,36 @@
 }
 
 .appTitle img {
-  height: auto;
-  width: 40%;
-  padding-right: 1.5rem;
+  height: 30%;
+  width: 30%;
+  padding-top: 1.5rem;
+  padding-right: 1.2rem;
 }
 
 .icon {
   color: whitesmoke;
   padding-right: 0.5rem;
+}
+
+.scoreContainer {
+  display: flex;
+  width: 70vw;
+}
+
+.scoreContainer p:nth-child(1) {
+  width: 50vw;
+  margin-top: 1.3rem;
+}
+
+.score {
+  width: 45px;
+  height: 20px;
+  padding: 5px;
+  border: 2px solid #656565;
+  border-radius: 10px;
+  background-color: #656565;
+  line-height: 20px;
+  text-align: center;
 }
 
 .infoText a {
@@ -97,8 +119,25 @@
 }
 
 @media (min-width: 600px) {
+  .scoreContainer p:nth-child(1) {
+    width: 40vw;
+    margin-top: 1.8rem;
+  }
+
+  .score {
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+  }
+  
   .number {
+    width: 30px;
+    height: 30px;
     margin: 0.8rem 0 0 0;
+  }
+
+  .number p {
+    line-height: 30px;
   }
 }
 
@@ -118,18 +157,29 @@
   }
 
   .appTitle img {
-    height: auto;
-    width: 27%;
+    height: 25%;
+    width: 25%;
+  }
+
+  .scoreContainer p:nth-child(1) {
+    width: 25vw;
+    margin-top: 2rem;
+  }
+
+  .score {
+    width: 70px;
+    height: 35px;
+    line-height: 35px;
   }
 
   .number {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     margin: 0.7rem 0 0 0;
   }
 
   .number p {
-    line-height: 30px;
+    line-height: 35px;
   }
 
   .numberList {
@@ -144,5 +194,14 @@
 @media (min-width: 1280px) {
   .singleAppSection .infoContainer {
     width: 50vw;
+  }
+
+  .appTitle img {
+    height: 19%;
+    width: 19%;
+  }
+
+  .scoreContainer p:nth-child(1) {
+    width: 20vw;
   }
 }
