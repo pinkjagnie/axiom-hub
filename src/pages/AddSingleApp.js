@@ -11,6 +11,7 @@ const isUrl = (value) => value.includes('play.google.com/');
 const AddSingleApp = () => {
   const [modalIsShown, setModalIsShown] = useState(false);
   const [errorMessage, setErrorMessage] = useState();
+  const [packageUrlName, setPackageName] = useState();
 
   const {
     value: urlValue,
@@ -69,6 +70,7 @@ const AddSingleApp = () => {
     }
 
     addApp(urlName);
+    setPackageName(urlName);
 
     resetUrl();
     formIsValid = false;
@@ -86,7 +88,7 @@ const AddSingleApp = () => {
       <div className={styles.ninjaIcon}>
         <img src={ninja} alt="ninja"/>
       </div>
-      {modalIsShown && <ErrorModal onClose={hideModalHandler} errorMessage={errorMessage} />}
+      {modalIsShown && <ErrorModal onClose={hideModalHandler} errorMessage={errorMessage} packageName={packageUrlName} />}
       <form className={styles.form} onSubmit={submitHandler}>
         <div className={styles.control}>
           <label htmlFor="url" style={urlLabelClass}>Link to the package in Google Play</label>

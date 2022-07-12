@@ -10,9 +10,9 @@
 
 .modal {
   position: fixed;
-  top: 25vh;
-  left: calc(50% - 35vw);
-  width: 60vw;
+  top: 18vh;
+  left: calc(50% - 40vw);
+  width: 70vw;
   min-height: 50vh;
   background-color: white;
   color: #1f2b37;
@@ -37,6 +37,26 @@
   text-align: center;
 } 
 
+.linkContainer {
+  padding-top: 0.8rem;
+}
+
+.icon {
+  display: none;
+}
+
+.link {			 
+  display: block;
+  padding: 10px 20px;
+  margin: 0 auto;
+  border: #39ac31 2px solid;
+  border-radius: 25px;
+  color: whitesmoke;
+  background: #39ac31;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
 .closing {
   display: block;
   width: 40vw;
@@ -46,7 +66,7 @@
   border-radius: 25px;
   background-color: #1f2b37;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
   cursor: pointer;
 }
@@ -54,7 +74,7 @@
 @media (min-width: 360px) {
   .modal {
     top: 20vh;
-    left: calc(50% - 35vw);
+    left: calc(50% - 40vw);
   }
   
   .text {
@@ -62,7 +82,13 @@
   }
 
   .closing {
-    margin: 1.5rem auto;
+    margin: 0.5rem auto 1.5rem auto;
+  }
+}
+
+@media (min-width: 390px) {
+  .modal {
+    min-height: 42vh;
   }
 }
 
@@ -70,27 +96,16 @@
   .modal {
     width: 60vw;
     min-height: 45vh;
+    left: calc(50% - 34vw);
   }
 }
 
 @media (min-width: 600px) {
   .modal {
     width: 60vw;
+    min-height: 40vh;
+    top: 25vh;
     left: calc(50% - 32vw);
-  }
-
-  .text {
-    padding: 3rem;
-  }
-
-  .closing {
-    margin: 1.5rem auto;
-  }
-}
-
-@media (min-width: 768px) {
-  .closing {
-    margin: 1.8rem auto;
   }
 }
 
@@ -104,6 +119,22 @@
 
   .text {
     padding: 1.3rem;
+  }
+
+  .linkContainer {
+    display: flex;
+    width: 28vw;
+    margin: 0 auto;
+  }
+
+  .icon {
+    display: block;
+    font-size: 3.3rem;
+  }
+
+  .link:hover {
+    background-color: #656565;
+    border-color: #656565;
   }
 
   .closing {
@@ -121,6 +152,10 @@
     width: 40vw;
     top: 30vh;
     left: calc(50% - 22vw);
+  }
+
+  .linkContainer {
+    width: 22vw;
   }
 }
 

@@ -103,7 +103,7 @@
 
   .navBar .desktopNavigation ul {
     margin-top: 0;
-    background-color: #1f2b37;
+    /* background-color: #1f2b37; */
   }
 
   .navBar nav ul li .link:hover {
