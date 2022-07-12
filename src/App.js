@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import SharedLayout from './components/ui/SharedLayout';
@@ -9,23 +9,30 @@ import AddSingleApp from './pages/AddSingleApp';
 import About from './pages/About';
 import ErrorPage from './pages/ErrorPage';
 
-class App extends Component {
-  render() {
-    return (
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<SharedLayout />}>
-            <Route index element={<Home />} />
-            <Route path='reports' element={<SearchBar />} />
-            <Route path='reports/:package_name' element={<SingleApp />} />
-            <Route path='add-app' element={<AddSingleApp />} />
-            <Route path='about' element={<About />} />
-          </Route>
-          <Route path='*' element={<ErrorPage />} />
-        </Routes>
-      </BrowserRouter>
-    );
-  }
+import ReactGA from 'react-ga';
+const TRACKING_ID = "G-846QP97Z29"; 
+ReactGA.initialize(TRACKING_ID);
+
+const App = () => {
+  
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
+
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<SharedLayout />}>
+          <Route index element={<Home />} />
+          <Route path='reports' element={<SearchBar />} />
+          <Route path='reports/:package_name' element={<SingleApp />} />
+          <Route path='add-app' element={<AddSingleApp />} />
+          <Route path='about' element={<About />} />
+        </Route>
+        <Route path='*' element={<ErrorPage />} />
+      </Routes>
+    </BrowserRouter>
+  );  
 }
 
 export default App;
