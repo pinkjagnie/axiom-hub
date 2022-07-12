@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useLocation, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 import SingleReport from '../components/SingleReport';
 

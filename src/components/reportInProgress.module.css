@@ -1,0 +1,84 @@
+.inProgressSection {
+  min-height: 90vh;
+  width: 100%;
+}
+
+.goalContainer img {
+  width: 110%;
+}
+
+.textContainer {
+  width: 90vw;
+  padding: 1rem;
+  padding-bottom: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sloganContainer {
+  padding-top: 1rem;
+}
+
+.linkContainer {
+  padding: 1rem 0 4rem 0;
+  text-align: center;
+}
+
+.link {			 
+  padding: 10px 20px;
+  margin: 20px 0;
+  color: whitesmoke;
+  background: #39ac31;
+  text-decoration: none;
+}
+
+@media (min-width: 390px) {
+  .textContainer {
+    width: 80vw;
+    padding: 2rem;
+    padding-bottom: 0;
+  }
+
+  .sloganContainer {
+    padding-top: 1.8rem;
+  }
+}
+
+@media (min-width: 410px) {
+  .textContainer {
+    padding: 2.5rem;
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: 600px) {
+  .goalContainer img {
+    width: 120%;
+    margin-left:-50px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .goalContainer img {
+    position: absolute;
+    top: 15vh;
+    left: 0;
+    width: auto;
+    height: 100%;
+    z-index: -2;
+  }
+
+  .textContainer {
+    width: 40vw;
+    padding-left: 35rem;
+    padding-top: 5rem;
+  }
+
+  .linkContainer {
+    padding-left: 33rem;
+  }
+
+  .link:hover {
+    background-color: #656565;
+  }
+}

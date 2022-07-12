@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ReportInProgress from "./ReportInProgress";
 
 import ScrollToTop from "./ui/ScrollToTop";
 import hubIcon from "../img/hub_300-300.png";
@@ -36,6 +37,7 @@ const SingleReport = (props) => {
   return(
     <>
     <ScrollToTop />
+    {props.data.report.status === 1 ? <ReportInProgress /> : <>
     <div className={styles.infoContainer}>
       <div className={styles.infoText}>
         <div className={styles.appTitle}>
@@ -85,7 +87,7 @@ const SingleReport = (props) => {
     </div>
     <div className={styles.linkContainer}>
       <Link to='/reports' className={styles.link}>Keep looking</Link>
-    </div>
+    </div></>}
     </>
   )
 };
