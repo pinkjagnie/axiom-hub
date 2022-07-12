@@ -1,5 +1,5 @@
 .addSingleAppContainer {
-  height: 90vh;
+  height: 70vh;
   width: 100%;
 }
 
@@ -14,9 +14,14 @@
   text-align: center;
 }
 
+.ninjaIcon, 
+.ninjaIcon img {
+  display: none;
+}
+
 .form {
   width: 90vw;
-  padding-top: 0.5rem;
+  padding-top: 1rem;
   margin: 0 auto;
 }
 
@@ -39,7 +44,7 @@
   display: block;
   width: 85vw;
   margin: 0.3rem auto 0 auto;
-  padding: 0.2rem;
+  padding: 0.4rem;
   border-radius: 12px;
   border: 1px solid #ccc;
 }
@@ -61,23 +66,6 @@
   font-size: 1.5rem;
   font-weight: bold;
   cursor: pointer;
-}
-
-.linkContainer {
-  width: 70vw;
-  height: auto;
-  margin: auto;
-  text-align: center;
-}
-
-.link {			 
-  display: block;
-  padding: 10px 20px;
-  margin: 0 auto;
-  color: whitesmoke;
-  background: #39ac31;
-  text-decoration: none;
-  font-size: 1rem;
 }
 
 @media (min-width: 360px) and (min-height: 640px) {
@@ -106,7 +94,15 @@
 
 @media (min-width: 360px) and (min-height: 740px) {
   .addSingleAppContainer {
-    height: 80vh;
+    height: 70vh;
+  }
+
+  .titleSection {
+    padding-top: 2.5rem;
+  }
+
+  .titleSection p {
+    padding-bottom: 0.8rem;
   }
 }
 
@@ -118,11 +114,28 @@
   .titleSection {
     padding-top: 3rem;
   }
+
+  .ninjaIcon {
+    display: block;
+  }
+
+  .ninjaIcon img {
+    position: absolute;
+    left: 35vw;
+    top: 32vh;
+    display: block;
+    width: auto;
+    height: 12%;
+  }
+
+  .form {
+    padding-top: 7rem;
+  }
 }
 
 @media (min-width: 410px) {
   .addSingleAppContainer {
-    height: 80vh;
+    height: 70vh;
   }
 
   .titleSection {
@@ -131,6 +144,11 @@
 
   .titleSection p {
     font-size: 1.4rem;
+  }
+
+  .ninjaIcon img {
+    left: 35vw;
+    top: 34vh;
   }
 
   .control {
@@ -150,10 +168,6 @@
     width: 70vw;
     margin: 2.5rem auto;
   }
-
-  .link {
-    font-size: 1.4rem;
-  }
 }
 
 @media (min-width: 600px) {
@@ -162,15 +176,20 @@
     padding-top: 3rem;
   }
 
-  .linkContainer {
-    width: 60vw;
-    padding-top: 2rem;
+  .ninjaIcon img {
+    left: 38vw;
+    top: 35vh;
   }
 }
 
 @media (min-width: 768px) and (orientation: portrait) {
   .titleSection p {
     font-size: 1.6rem;
+  }
+
+  .ninjaIcon img {
+    left: 38vw;
+    top: 32vh;
   }
 
   .control input {
@@ -185,15 +204,11 @@
   .form button {
     width: 50vw;
   }
-
-  .link {
-    font-size: 1.5rem;
-  }
 }
 
 @media (min-width: 1024px) {
   .addSingleAppContainer {
-    min-height: 100vh;
+    min-height: 80vh;
   }
 
   .titleSection {
@@ -209,9 +224,16 @@
     font-size: 1.6rem;
   }
 
+  .ninjaIcon img {
+    left: 10vw;
+    top: 40vh;
+    width: auto;
+    height: 18%;
+  }
+
   .form {
     width: 60vw;
-    padding-top: 1.5rem;
+    padding-top: 3.5rem;
   }
 
   .form button {
@@ -238,13 +260,14 @@
   .form button:hover {
     background-color: #656565;
   }
+}
 
-  .linkContainer {
-    width: 40vw;
-  }
-
-  .link:hover {
-    background-color: #656565;
+@media (min-width: 1280px) {
+  .ninjaIcon img {
+    left: 15vw;
+    top: 40vh;
+    width: auto;
+    height: 18%;
   }
 }
 
@@ -259,9 +282,5 @@
 
   .control label {
     margin: 0 9vw;
-  }
-
-  .linkContainer {
-    width: 30vw;
   }
 }
