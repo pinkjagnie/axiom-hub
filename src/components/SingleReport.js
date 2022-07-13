@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ReportInProgress from "./ReportInProgress";
 
-import ScrollToTop from "./ui/ScrollToTop";
 import hubIcon from "../img/hub_300-300.png";
 
 import { MdReadMore } from "react-icons/md";
@@ -36,7 +35,6 @@ const SingleReport = (props) => {
 
   return(
     <>
-    <ScrollToTop />
     {props.data.report.status === 1 ? <ReportInProgress /> : <>
     <div className={styles.infoContainer}>
       <div className={styles.infoText}>

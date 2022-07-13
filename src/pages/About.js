@@ -1,6 +1,5 @@
 import React from "react";
 
-import ScrollToTop from "../components/ui/ScrollToTop";
 import Team from "../components/Team";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,8 +10,6 @@ import styles from "../components/about.module.css";
 
 const About = () => {
   return(
-    <>
-    <ScrollToTop />
     <div className={styles.aboutContainer}>
       <div className={styles.description}>
         <div className={styles.dictionary}>
@@ -48,7 +45,6 @@ const About = () => {
       <Team/>
           
     </div>
-    </>
   )
 };
 
